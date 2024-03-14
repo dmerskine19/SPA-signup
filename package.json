@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "bulma": "^0.9.4"
+    "tailwind": "^4.0.0"
   }
 }
