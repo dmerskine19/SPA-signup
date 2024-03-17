@@ -1,17 +1,5 @@
 {
   "dependencies": {
-    "bulma": "^0.9.4",
     "tailwind": "^4.0.0"
-  },
-  "name": "spa-signup",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
