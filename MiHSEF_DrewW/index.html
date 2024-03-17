@@ -1,121 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <!-- Bulma CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1; 
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto; 
-            background-color: rgba(0, 0, 0, 0.5); 
-        }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameX - Gaming website</title>
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; 
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .title {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .orange-text {
-            color: orange;
-        }
-    </style>
+    <!-- Add your CSS link here -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="app"></div>
 
-    <div class="center center-content">
-        <div class="title">
-            <span class="orange-text">Mi</span>HSEF
+<body id="top">
+
+    <header class="header">
+        <div class="container">
+            <h1>GameX</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tournaments">Tournaments</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#gears">Gears</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <button id="signupButton">Sign Up</button>
-    </div>
+    </header>
 
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Sign Up</h2>
-            <!-- Form -->
-            <div class="field">
-              <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
-                </span>
-              </p>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1>Welcome to GameX</h1>
+                <p> </p>
+                <button class="btn btn-primary">Sign Up Now</button>
             </div>
-            <div class="field">
-              <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Password">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </p>
+        </section>
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p> </p>
             </div>
-            <!-- End of Form -->
+        </section>
+
+        <!-- Add your additional sections, such as Tournaments, Team, Gears, Contact, etc. -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GameX. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
-    <script type="module" src="/main.js"></script>
-    <script>
+    <a href="#top" class="btn btn-primary go-top" data-go-top>
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </a>
 
-        var modal = document.getElementById('signupModal');
-
-
-        var btn = document.getElementById("signupButton");
-
-
-        var span = document.getElementsByClassName("close")[0];
-
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <!-- Add your JavaScript link here -->
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
