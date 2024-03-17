@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/vite.svg">
@@ -9,117 +10,52 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-    <div class="flex flex-col items-center justify-center h-screen">
-        <div class="text-4xl mb-8">
+<body>
+    <header id="header" class="bg-blue-900 p-4 text-center">
+        <h1 class="text-3xl font-bold">MiHSEF to Vite App</h1>
+    </header>
+
+    <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+        <div class="text-4xl my-8">
             <span class="text-orange-500">Mi</span>HSEF
         </div>
-        <button id="signupButton" class="py-3 px-6 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Sign Up</button>
+        <a href="#signupModal" class="scroll-to-button">
+            <button class="py-3 px-6 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Sign Up</button>
+        </a>
     </div>
 
-    <div id="signupModal" class="modal fixed inset-0 hidden justify-center items-center">
-        <div class="modal-content bg-white mx-auto p-8 rounded-lg w-4/5 md:w-1/2 lg:w-1/3">
+    <div id="signupModal" class="modal fixed inset-0 hidden flex justify-center items-center">
+        <div class="modal-content bg-white p-8 rounded-lg">
             <span class="close absolute top-0 right-0 p-4">&times;</span>
             <h2 class="text-2xl mb-6">Sign Up</h2>
             <!-- Form -->
             <div class="mb-6">
-              <input class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="email" placeholder="Email">
+                <input class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="email" placeholder="Email">
             </div>
             <div class="mb-6">
-              <input class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="password" placeholder="Password">
+                <input class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="password" placeholder="Password">
             </div>
             <!-- End of Form -->
         </div>
     </div>
 
-    <script type="module" src="/main.js"></script>
-    <script>
-        var modal = document.getElementById('signupModal');
-        var btn = document.getElementById("signupButton");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.classList.remove("hidden");
-        }
-
-        span.onclick = function() {
-            modal.classList.add("hidden");
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.classList.add("hidden");
-            }
-        }
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameX - Gaming website</title>
-
-    <!-- Add your CSS link here -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body id="top">
-
-    <header class="header">
-        <div class="container">
-            <h1>GameX</h1>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tournaments">Tournaments</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#gears">Gears</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <div id="secondPage" class="h-screen bg-gray-800 text-white">
+        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+            <h2 class="text-4xl my-8">Welcome to the Second Page</h2>
+            <p>This is the content of the second page.</p>
         </div>
-    </header>
+    </div>
 
-    <main>
-        <section class="hero" id="hero">
-            <div class="container">
-                <h1>Welcome to GameX</h1>
-                <p> </p>
-                <button class="btn btn-primary">Sign Up Now</button>
-            </div>
-        </section>
-
-        <!-- About section -->
-        <section class="about" id="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p> </p>
-            </div>
-        </section>
-
-        <!-- Add your additional sections, such as Tournaments, Team, Gears, Contact, etc. -->
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 GameX. All rights reserved.</p>
+    <a href="#header" class="scroll-to-top">
+        <div class="scroll-up">
+            <i class="fas fa-angle-up"></i>
         </div>
-    </footer>
-
-    <a href="#top" class="btn btn-primary go-top" data-go-top>
-        <ion-icon name="chevron-up-outline"></ion-icon>
     </a>
 
-    <!-- Add your JavaScript link here -->
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
